@@ -1,0 +1,48 @@
+.form-group{
+    margin-bottom: 0 !important;
+}
+
+
+.dropdown-menu{
+    position: absolute;
+    will-change: transform;
+    top: 30px;
+    left: 14px;
+    transform: translate3d(0px, 0px, 0px) !important;
+}
+
+
+.dropdown-item{
+    text-align: initial !important;
+}
+
+.dropdown-item:hover{
+    color: black !important;
+}
+
+.form-control {
+    border: 1px solid;
+}
+
+.full_input {
+    width: 125%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.td_c {
+ padding: 5px !important;
+}
+
+.tr_c {
+    font-size: 16px;font-weight: bold
+}
+
+
+.current_user_img {
+    margin: 20px 0px;
+    width: 250px;
+}

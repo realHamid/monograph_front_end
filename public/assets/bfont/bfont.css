@@ -1,0 +1,51 @@
+/*Nazir Ahmad Custome Fonts*/
+@font-face {
+    font-family: 'BTITRBD';
+    src: url('font/BTITRBD.eot');
+    src: url('font/BTITRBD.eot?#iefix') format('embedded-opentype'),
+    url('font/BTITRBD.woff') format('woff'),
+    url('font/BTITRBD.ttf') format('truetype'),
+    url('font/BTITRBD.svg#BTITRBD') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BTITRBD';
+    src: url('font/BTITRBD.eot');
+    src: url('font/BTITRBD.eot?#iefix') format('embedded-opentype'),
+    url('font/BTITRBD.woff') format('woff'),
+    url('font/BTITRBD.ttf') format('truetype'),
+    url('font/BTITRBD.svg#BTITRBD') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BTITRBD';
+    src: url('font/BTITRBD.eot');
+    src: url('font/BTITRBD.eot?#iefix') format('embedded-opentype'),
+    url('font/BTITRBD.woff') format('woff'),
+    url('font/BTITRBD.ttf') format('truetype'),
+    url('font/BTITRBD.svg#BTITRBD') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url('font/myriadproregular.eot');
+    src: url('font/myriadproregular.eot?#iefix') format('embedded-opentype'),
+    url('font/myriadproregular.woff') format('woff'),
+    url('font/myriadproregular.ttf') format('truetype'),
+    url('font/myriadproregular.svg#myriadproregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.sidebar ul li a{
+    font-family: 'BTITRBD';
+    font-size:13px;
+}
+.bfont{
+    font-family: 'BTITRBD';
+}
