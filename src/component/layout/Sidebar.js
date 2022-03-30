@@ -13,7 +13,7 @@ class Sidebar extends Component{
                 { title : ' ثبت موقعیت  '  ,        icon : 'mdi mdi-account-multiple-plus menu-icon ' , link : '/location' },
                 { title : ' لیست موقعیت  '  ,       icon : 'mdi mdi-account-multiple-plus menu-icon ' , link : '/list_location' },
                 { title : '  ثبت دسته بندی  '  ,    icon : 'mdi mdi-border-color menu-icon' , link : '/category' },
-                { title : '  ثبت امکانات  '  ,      icon : 'mdi mdi-home menu-icon' , link : '/fechar' },
+                { title : '  ثبت امکانات  '  ,      icon : 'mdi mdi-home menu-icon' , link : '/feature' },
                 { title : ' ثبت ولایت  '  ,          icon : 'mdi mdi-home menu-icon' , link : '/province' },
                 { title : ' ثبت ولسوالی  '  ,       icon : 'mdi mdi-home menu-icon' , link : '/district' },
                 { title : 'مدریت کاربران  '  ,      icon : 'mdi mdi-home menu-icon' , link : '/user' },
