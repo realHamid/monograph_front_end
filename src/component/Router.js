@@ -1,4 +1,4 @@
-import React , {Component} from "react";
+import React, { Component } from "react";
 
 
 import { Route, Switch } from 'react-router-dom';
@@ -13,23 +13,22 @@ import Location from "./location/Location";
 import List_Location from "./location/List_Location";
 import Home from "./Home/Home";
 
-class Router extends Component{
+class Router extends Component {
 
     render() {
-        return(
-            <Switch>
-                <Route path='/' exact               component={Home}/>
-                <Route path='/category'             component={Category}/>
-                <Route path='/fechar'               component={Fechar}/>
-                <Route path='/province'             component={Province}/>
-                <Route path='/district'             component={District}/>
-                <Route path='/user'                 component={User}/>
-                <Route path='/location'             component={Location}/>
-                <Route path='/list_location'             component={List_Location}/>
+        return (
+            <Switch >
+                <Route path = '/' exact component = { Home }/>
+                <Route path = '/category' component = { Category }/>
+                <Route path = '/fechar' component = { Fechar }/>
+                <Route path = '/province'  component = { Province } />
+                <Route path = '/district'  component = { District }/>
+                <Route path = '/user' component = { User }/>
+                <Route path = '/location'  component = { Location }/>
+                <Route path = '/list_location' component = { List_Location }/>
             </Switch>
         );
     }
-
 }
 
 

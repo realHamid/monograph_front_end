@@ -2,7 +2,6 @@ import React , {Component} from "react";
 import axios from "./axios/axios";
 import Main from './layout/Main'
 
-import {Redirect} from 'react-router-dom'
 
 class Login extends Component{
 
@@ -10,7 +9,8 @@ class Login extends Component{
     passWordInput = null;
 
     state = {
-        isLogin : false
+        isLogin : false,
+        message :''
     }
 
 
@@ -23,8 +23,25 @@ class Login extends Component{
         console.log(data)
         if(userName.length >= 1 && password.length >= 1){
             axios.post('/login',data).then((response) => {
-                this.saveLoginData(response.data);
+
+                if(response.data.status_login === "true"){
+                    this.saveLoginData(response.data);
+                }else {
+                    this.setState((oldState,props)  => {
+                        return {
+                            ...oldState,
+                            message : ' این نام کاربری یا رموز عبور اشتباه میباشد! '
+                        }
+                    });
+                }
+
             }).catch((err) => {
+                this.setState((oldState,props)  => {
+                    return {
+                        ...oldState,
+                        message : ' سرور خاموش میباشد. '
+                    }
+                });
                 console.log(err);
             });
         }else {
@@ -76,6 +93,11 @@ class Login extends Component{
                                         <div className="form-group">
                                             <input type="password" ref={e1 => this.passWordInput = e1 } className="form-control form-control-lg bfont" placeholder="رموز عبور " />
                                         </div>
+                                        <p style={{paddingTop:'10px',color:'red',display:'flex',fontSize:'16px'}}>
+                                            {
+                                                this.state.message
+                                            }
+                                        </p>
                                         <div className="mt-3">
                                             <button type='submit' onClick={this.obSubmitForm} className="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn bfont " > وارد شدن  </button>
                                         </div>
