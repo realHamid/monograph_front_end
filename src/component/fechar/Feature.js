@@ -110,7 +110,7 @@ class Feature extends Component{
                     </div>
                 </div>
 
-                <ListFechar list={this.state.list} />
+                <ListFechar list={this.state.list} getList={this.getList} />
 
             </>
         )
