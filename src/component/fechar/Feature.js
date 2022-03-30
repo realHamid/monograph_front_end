@@ -1,7 +1,12 @@
 import React , {Component} from "react";
 import ListFechar from "./ListFechar";
 
-class Fechar extends Component{
+class Feature extends Component{
+
+
+
+
+
 
     render() {
         return(
@@ -59,4 +64,4 @@ class Fechar extends Component{
     }
 }
 
-export default Fechar;
+export default Feature;

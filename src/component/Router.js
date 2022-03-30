@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 import Test from "./Test/Test";
 import Category from "./category/Category";
-import Fechar from "./fechar/Fechar";
+import Feature from "./fechar/Feature";
 import EditUser from "./User/EditUser";
 import Province from "./province/Province";
 import District from "./district/District";
@@ -20,7 +20,7 @@ class Router extends Component {
             <Switch >
                 <Route path = '/' exact component = { Home }/>
                 <Route path = '/category' component = { Category }/>
-                <Route path = '/fechar' component = { Fechar }/>
+                <Route path = '/feature' component = { Feature }/>
                 <Route path = '/province'  component = { Province } />
                 <Route path = '/district'  component = { District }/>
                 <Route path = '/user' component = { User }/>
