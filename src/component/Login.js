@@ -20,7 +20,6 @@ class Login extends Component{
         let userName = this.userNameInput.value;
         let password = this.passWordInput.value;
         let data = {userName,password};
-        console.log(data)
         if(userName.length >= 1 && password.length >= 1){
             axios.post('/login',data).then((response) => {
 

@@ -1,17 +1,17 @@
 import React , {Component} from "react";
 
-import logo_src from '../assets/img/logo.svg';
 import logo_name from '../assets/img/namelogo.svg';
 import face1 from  '../assets/faces/face1.jpg';
-import face2 from  '../assets/faces/face2.jpg';
-import face3 from  '../assets/faces/face3.jpg';
-import face4 from  '../assets/faces/face4.jpg';
-import face5 from  '../assets/faces/face5.jpg';
-import face6 from  '../assets/faces/face6.jpg';
 import {Link} from "react-router-dom";
 
 
 class Head extends Component{
+
+
+    logout = () => {
+        this.props.logout();
+    }
+
 
     render() {
         return(
@@ -59,7 +59,7 @@ class Head extends Component{
                                     <Link className="dropdown-item" to='/profile'>
                                         <i className="mdi mdi-cached mr-2 text-success bfont"></i> تظمیات </Link>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">
+                                    <a className="dropdown-item"  onClick={this.logout} >
                                         <i className="mdi mdi-logout mr-2 text-primary bfont"></i> خروج </a>
                                 </div>
                             </li>

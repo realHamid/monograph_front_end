@@ -10,11 +10,25 @@ import Router from "../Router";
 
 class Main extends Component {
 
+    state = {
+        isChange : true
+    }
+
+    logout = () => {
+        localStorage.removeItem('user-data');
+        this.setState((oldState,props)  => {
+            return {
+                ...oldState,
+                isChange : false
+            }
+        });
+    }
+
     mainContent = () => (
         <>
             <div className="container-scroller">
 
-                <Head />
+                <Head logout={this.logout} />
 
                 <div className="container-fluid page-body-wrapper">
 
