@@ -1,7 +1,32 @@
 import React , {Component} from "react";
 import ListProvince from "./ListProvince";
+import axios from "../axios/axios";
 
 class Province extends Component{
+
+    submitForm = e => {
+
+        e.preventDefault();
+
+        let form = document.getElementById('province_from');
+        let formData = new FormData(form);
+
+        formData.append('token' , 'b58ac01c6c7a9fb5ffd1a5d9c7d68955');
+        formData.append('api_token' , JSON.parse(localStorage.getItem('user-data')).api_token);
+
+        axios.post('/province',formData).then((response) => {
+
+            document.getElementById('name').value = '';
+            document.getElementById('date').value = '';
+            document.getElementById('note').value = '';
+            // this.getList();
+
+        }).catch((err) => {
+            console.log(err);
+        });
+
+    }
+
 
     render() {
         return(
@@ -17,8 +42,7 @@ class Province extends Component{
                                 <h4 className="card-title"><span className="bfont"> ثبت اطلاعات  </span></h4>
                                 <p className="card-description"><span className="bfont"> مشخصات ولایت وارد نموده ثبت نماید ! </span>
                                 </p>
-                                <form className="forms-sample">
-
+                                <form className="forms-sample" id="province_from" onSubmit={this.submitForm}>
 
                                     <div className="form-group row mr-sm-4">
                                         <label htmlFor="exampleInputUsername2" className="col-sm-2 col-form-label bfont" >  تصویر ولایت  <span className="text-danger">*</span> </label>
@@ -28,23 +52,23 @@ class Province extends Component{
                                     </div>
 
                                     <div className="form-group row mr-sm-4">
-                                        <label htmlFor="exampleInputUsername2" className="col-sm-2 col-form-label bfont" >  نام ولایت  <span className="text-danger">*</span> </label>
+                                        <label htmlFor="name" className="col-sm-2 col-form-label bfont" >  نام ولایت  <span className="text-danger">*</span> </label>
                                         <div className="col-sm-7">
-                                            <input type="text" className="form-control form-control-sm  bfont"  placeholder=" هرات   " />
+                                            <input type="text" required name="name" id="name" className="form-control form-control-sm  bfont"  placeholder=" هرات   " />
                                         </div>
                                     </div>
 
                                     <div className="form-group row mr-sm-4">
-                                        <label htmlFor="exampleInputUsername2" className="col-sm-2 col-form-label bfont" >  تاریخ ثبت  <span className="text-danger">*</span> </label>
+                                        <label htmlFor="date" className="col-sm-2 col-form-label bfont" >  تاریخ ثبت  <span className="text-danger">*</span> </label>
                                         <div className="col-sm-7">
-                                            <input type="date" className="form-control form-control-sm  bfont"  placeholder="" />
+                                            <input type="date" required name="date" id="date" className="form-control form-control-sm  bfont"  placeholder="" />
                                         </div>
                                     </div>
 
                                     <div className="form-group row mr-sm-4">
-                                        <label htmlFor="exampleInputUsername2" className="col-sm-2 col-form-label bfont" >  توضیحات   </label>
+                                        <label htmlFor="note" className="col-sm-2 col-form-label bfont" >  توضیحات   </label>
                                         <div className="col-sm-7">
-                                            <textarea className="form-control form-control-sm  bfont" style={{height: '120px'}} ></textarea>
+                                            <textarea id="note" name="note" className="form-control form-control-sm  bfont" style={{height: '120px'}} ></textarea>
                                         </div>
                                     </div>
                                     <br />
