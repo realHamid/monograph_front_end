@@ -3,8 +3,10 @@ import {Link} from "react-router-dom";
 
 class ListCategory extends Component{
 
+    count = 1;
 
     render() {
+        this.count = 1;
         return (
             <>
                 <div className="row">
@@ -25,223 +27,39 @@ class ListCategory extends Component{
                                         </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <span className="bfont">  تاریخی    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این دسته بندی برای ثبت بندهای تاریخی میباشد  </span> </td>
-                                            <td> <span className="bfont pointer" data-toggle="modal"
-                                                       data-target="#exampleModal-4"
-                                                       data-whatever="@fat"  > جزعیات   </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                            <tr>
-                                                <td> <span className="bfont"> 1  </span> </td>
-                                                <td> <span className="bfont">  تاریخی    </span> </td>
-                                                <td> <span className="bfont">  2021/01/02   </span> </td>
-                                                <td> <span className="bfont">  این دسته بندی برای ثبت بندهای تاریخی میباشد  </span> </td>
-                                                <td> <span className="bfont pointer" data-toggle="modal"
-                                                           data-target="#exampleModal-4"
-                                                           data-whatever="@fat"  > جزعیات   </span> </td>
-                                                <td>
-                                                    <div className="dropdown">
-                                                        <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                                type="button" id="dropdownMenuOutlineButton1"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                        </button>
-                                                        <div className="dropdown-menu"
-                                                             aria-labelledby="dropdownMenuOutlineButton1"
-                                                             x-placement="bottom-start" >
-                                                            <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                                <i className="mdi mdi-tooltip-edit">  </i>
-                                                                <span className="bfont"> ویرایش  </span>
-                                                            </Link>
-                                                            <div className="dropdown-divider"></div>
-                                                            <a className="dropdown-item" href="#">
-                                                                <i className="mdi mdi-delete"> </i>
-                                                                <span className="bfont"> حذف  </span>
-                                                            </a>
+
+                                        {
+                                            this.props.list.map( row => (
+                                                <tr key={row.id}>
+                                                    <td> <span className="bfont"> { this.count++ }  </span> </td>
+                                                    <td> <span className="bfont">  { row.name }    </span> </td>
+                                                    <td> <span className="bfont">  { row.date }  </span> </td>
+                                                    <td> <span className="bfont">  { row.note } </span> </td>
+                                                    <td>
+                                                        <div className="dropdown">
+                                                            <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
+                                                                    type="button" id="dropdownMenuOutlineButton1"
+                                                                    data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"><i className="mdi mdi-settings"></i>
+                                                            </button>
+                                                            <div className="dropdown-menu"
+                                                                 aria-labelledby="dropdownMenuOutlineButton1"
+                                                                 x-placement="bottom-start" >
+                                                                <Link className="dropdown-item" to='/customer_edit?id=1'>
+                                                                    <i className="mdi mdi-tooltip-edit">  </i>
+                                                                    <span className="bfont"> ویرایش  </span>
+                                                                </Link>
+                                                                <div className="dropdown-divider"></div>
+                                                                <a className="dropdown-item" href="#">
+                                                                    <i className="mdi mdi-delete"> </i>
+                                                                    <span className="bfont"> حذف  </span>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td> <span className="bfont"> 1  </span> </td>
-                                                <td> <span className="bfont">  تاریخی    </span> </td>
-                                                <td> <span className="bfont">  2021/01/02   </span> </td>
-                                                <td> <span className="bfont">  این دسته بندی برای ثبت بندهای تاریخی میباشد  </span> </td>
-                                                <td> <span className="bfont pointer" data-toggle="modal"
-                                                           data-target="#exampleModal-4"
-                                                           data-whatever="@fat"  > جزعیات   </span> </td>
-                                                <td>
-                                                    <div className="dropdown">
-                                                        <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                                type="button" id="dropdownMenuOutlineButton1"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                        </button>
-                                                        <div className="dropdown-menu"
-                                                             aria-labelledby="dropdownMenuOutlineButton1"
-                                                             x-placement="bottom-start" >
-                                                            <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                                <i className="mdi mdi-tooltip-edit">  </i>
-                                                                <span className="bfont"> ویرایش  </span>
-                                                            </Link>
-                                                            <div className="dropdown-divider"></div>
-                                                            <a className="dropdown-item" href="#">
-                                                                <i className="mdi mdi-delete"> </i>
-                                                                <span className="bfont"> حذف  </span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td> <span className="bfont"> 1  </span> </td>
-                                                <td> <span className="bfont">  تاریخی    </span> </td>
-                                                <td> <span className="bfont">  2021/01/02   </span> </td>
-                                                <td> <span className="bfont">  این دسته بندی برای ثبت بندهای تاریخی میباشد  </span> </td>
-                                                <td> <span className="bfont pointer" data-toggle="modal"
-                                                           data-target="#exampleModal-4"
-                                                           data-whatever="@fat"  > جزعیات   </span> </td>
-                                                <td>
-                                                    <div className="dropdown">
-                                                        <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                                type="button" id="dropdownMenuOutlineButton1"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                        </button>
-                                                        <div className="dropdown-menu"
-                                                             aria-labelledby="dropdownMenuOutlineButton1"
-                                                             x-placement="bottom-start" >
-                                                            <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                                <i className="mdi mdi-tooltip-edit">  </i>
-                                                                <span className="bfont"> ویرایش  </span>
-                                                            </Link>
-                                                            <div className="dropdown-divider"></div>
-                                                            <a className="dropdown-item" href="#">
-                                                                <i className="mdi mdi-delete"> </i>
-                                                                <span className="bfont"> حذف  </span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td> <span className="bfont"> 1  </span> </td>
-                                                <td> <span className="bfont">  تاریخی    </span> </td>
-                                                <td> <span className="bfont">  2021/01/02   </span> </td>
-                                                <td> <span className="bfont">  این دسته بندی برای ثبت بندهای تاریخی میباشد  </span> </td>
-                                                <td> <span className="bfont pointer" data-toggle="modal"
-                                                           data-target="#exampleModal-4"
-                                                           data-whatever="@fat"  > جزعیات   </span> </td>
-                                                <td>
-                                                    <div className="dropdown">
-                                                        <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                                type="button" id="dropdownMenuOutlineButton1"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                        </button>
-                                                        <div className="dropdown-menu"
-                                                             aria-labelledby="dropdownMenuOutlineButton1"
-                                                             x-placement="bottom-start" >
-                                                            <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                                <i className="mdi mdi-tooltip-edit">  </i>
-                                                                <span className="bfont"> ویرایش  </span>
-                                                            </Link>
-                                                            <div className="dropdown-divider"></div>
-                                                            <a className="dropdown-item" href="#">
-                                                                <i className="mdi mdi-delete"> </i>
-                                                                <span className="bfont"> حذف  </span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td> <span className="bfont"> 1  </span> </td>
-                                                <td> <span className="bfont">  تاریخی    </span> </td>
-                                                <td> <span className="bfont">  2021/01/02   </span> </td>
-                                                <td> <span className="bfont">  این دسته بندی برای ثبت بندهای تاریخی میباشد  </span> </td>
-                                                <td> <span className="bfont pointer" data-toggle="modal"
-                                                           data-target="#exampleModal-4"
-                                                           data-whatever="@fat"  > جزعیات   </span> </td>
-                                                <td>
-                                                    <div className="dropdown">
-                                                        <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                                type="button" id="dropdownMenuOutlineButton1"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                        </button>
-                                                        <div className="dropdown-menu"
-                                                             aria-labelledby="dropdownMenuOutlineButton1"
-                                                             x-placement="bottom-start" >
-                                                            <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                                <i className="mdi mdi-tooltip-edit">  </i>
-                                                                <span className="bfont"> ویرایش  </span>
-                                                            </Link>
-                                                            <div className="dropdown-divider"></div>
-                                                            <a className="dropdown-item" href="#">
-                                                                <i className="mdi mdi-delete"> </i>
-                                                                <span className="bfont"> حذف  </span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td> <span className="bfont"> 1  </span> </td>
-                                                <td> <span className="bfont">  تاریخی    </span> </td>
-                                                <td> <span className="bfont">  2021/01/02   </span> </td>
-                                                <td> <span className="bfont">  این دسته بندی برای ثبت بندهای تاریخی میباشد  </span> </td>
-                                                <td> <span className="bfont pointer" data-toggle="modal"
-                                                           data-target="#exampleModal-4"
-                                                           data-whatever="@fat"  > جزعیات   </span> </td>
-                                                <td>
-                                                    <div className="dropdown">
-                                                        <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                                type="button" id="dropdownMenuOutlineButton1"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                        </button>
-                                                        <div className="dropdown-menu"
-                                                             aria-labelledby="dropdownMenuOutlineButton1"
-                                                             x-placement="bottom-start" >
-                                                            <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                                <i className="mdi mdi-tooltip-edit">  </i>
-                                                                <span className="bfont"> ویرایش  </span>
-                                                            </Link>
-                                                            <div className="dropdown-divider"></div>
-                                                            <a className="dropdown-item" href="#">
-                                                                <i className="mdi mdi-delete"> </i>
-                                                                <span className="bfont"> حذف  </span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                </tr>
+                                            ))
+                                        }
 
                                         </tbody>
                                     </table>

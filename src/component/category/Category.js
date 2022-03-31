@@ -1,8 +1,39 @@
 import React , {Component} from "react";
 import ListCategory from "./ListCategory";
 import axios from "../axios/axios";
+import ListFechar from "../fechar/ListFechar";
 
 class Category extends Component{
+
+    state = {
+        list : []
+    }
+
+
+    getList = () => {
+        let auth = {
+            'token'  : "b58ac01c6c7a9fb5ffd1a5d9c7d68955" ,
+            'api_token' : JSON.parse(localStorage.getItem('user-data')).api_token
+        };
+
+        axios.post('/category/list',auth).then((response) => {
+
+            this.setState((oldState,props)  => {
+                return {
+                    ...oldState,
+                    list : response.data
+                }
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+
+    }
+
+    componentDidMount() {
+        this.getList();
+    }
+
 
     submitForm = e => {
 
@@ -78,7 +109,7 @@ class Category extends Component{
                     </div>
                 </div>
 
-                <ListCategory/>
+                <ListCategory list={this.state.list} getList={this.getList} />
 
             </>
         )
