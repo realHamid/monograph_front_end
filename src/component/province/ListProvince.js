@@ -5,7 +5,12 @@ import herat_img from '../assets/img/Herat_img.jpg'
 
 class ListProvince extends Component{
 
+    count = 1;
+
     render() {
+
+        this.count = 1;
+
         return (
             <>
                 <div className="row">
@@ -27,209 +32,41 @@ class ListProvince extends Component{
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
-                                            <td> <span className="bfont">  هرات    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این ولایت امکان گردشگری زیادی دارد     </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
-                                            <td> <span className="bfont">  هرات    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این ولایت امکان گردشگری زیادی دارد     </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
-                                            <td> <span className="bfont">  هرات    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این ولایت امکان گردشگری زیادی دارد     </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
-                                            <td> <span className="bfont">  هرات    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این ولایت امکان گردشگری زیادی دارد     </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
-                                            <td> <span className="bfont">  هرات    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این ولایت امکان گردشگری زیادی دارد     </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
-                                            <td> <span className="bfont">  هرات    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این ولایت امکان گردشگری زیادی دارد     </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <span className="bfont"> 1  </span> </td>
-                                            <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
-                                            <td> <span className="bfont">  هرات    </span> </td>
-                                            <td> <span className="bfont">  2021/01/02   </span> </td>
-                                            <td> <span className="bfont">  این ولایت امکان گردشگری زیادی دارد     </span> </td>
-                                            <td>
-                                                <div className="dropdown">
-                                                    <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
-                                                            type="button" id="dropdownMenuOutlineButton1"
-                                                            data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false"><i className="mdi mdi-settings"></i>
-                                                    </button>
-                                                    <div className="dropdown-menu"
-                                                         aria-labelledby="dropdownMenuOutlineButton1"
-                                                         x-placement="bottom-start" >
-                                                        <Link className="dropdown-item" to='/customer_edit?id=1'>
-                                                            <i className="mdi mdi-tooltip-edit">  </i>
-                                                            <span className="bfont"> ویرایش  </span>
-                                                        </Link>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">
-                                                            <i className="mdi mdi-delete"> </i>
-                                                            <span className="bfont"> حذف  </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
+
+                                        {
+                                            this.props.list.map( row => (
+                                                <tr key={row.id} >
+                                                    <td> <span className="bfont"> { this.count++ }  </span> </td>
+                                                    <td> <img src={herat_img} style={{width: '100px' ,borderRadius: 'unset', height: 'auto'}} /> </td>
+                                                    <td> <span className="bfont">  { row.name }    </span> </td>
+                                                    <td> <span className="bfont"> { row.date }   </span> </td>
+                                                    <td> <span className="bfont">  { row.note }   </span> </td>
+                                                    <td>
+                                                        <div className="dropdown">
+                                                            <button className="btn btn-primary dropdown-toggle" style={{padding: '5px'}}
+                                                                    type="button" id="dropdownMenuOutlineButton1"
+                                                                    data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false"><i className="mdi mdi-settings"></i>
+                                                            </button>
+                                                            <div className="dropdown-menu"
+                                                                 aria-labelledby="dropdownMenuOutlineButton1"
+                                                                 x-placement="bottom-start" >
+                                                                <Link className="dropdown-item" to='/customer_edit?id=1'>
+                                                                    <i className="mdi mdi-tooltip-edit">  </i>
+                                                                    <span className="bfont"> ویرایش  </span>
+                                                                </Link>
+                                                                <div className="dropdown-divider"></div>
+                                                                <a className="dropdown-item" href="#">
+                                                                    <i className="mdi mdi-delete"> </i>
+                                                                    <span className="bfont"> حذف  </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            ))
+                                        }
 
                                         </tbody>
                                     </table>

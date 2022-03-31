@@ -4,6 +4,35 @@ import axios from "../axios/axios";
 
 class Province extends Component{
 
+    state = {
+        list : []
+    }
+
+
+    getList = () => {
+        let auth = {
+            'token'  : "b58ac01c6c7a9fb5ffd1a5d9c7d68955" ,
+            'api_token' : JSON.parse(localStorage.getItem('user-data')).api_token
+        };
+
+        axios.post('/province/list',auth).then((response) => {
+
+            this.setState((oldState,props)  => {
+                return {
+                    ...oldState,
+                    list : response.data
+                }
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+
+    }
+
+    componentDidMount() {
+        this.getList();
+    }
+
     submitForm = e => {
 
         e.preventDefault();
@@ -19,7 +48,7 @@ class Province extends Component{
             document.getElementById('name').value = '';
             document.getElementById('date').value = '';
             document.getElementById('note').value = '';
-            // this.getList();
+            this.getList();
 
         }).catch((err) => {
             console.log(err);
@@ -86,7 +115,7 @@ class Province extends Component{
                     </div>
                 </div>
 
-                <ListProvince/>
+                <ListProvince list={this.state.list} />
 
             </>
         )
