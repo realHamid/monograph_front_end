@@ -115,7 +115,7 @@ class Province extends Component{
                     </div>
                 </div>
 
-                <ListProvince list={this.state.list} />
+                <ListProvince list={this.state.list} getList={this.getList} />
 
             </>
         )
