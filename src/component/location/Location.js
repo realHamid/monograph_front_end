@@ -62,7 +62,6 @@ class Location extends Component{
 
         axios.post('/location/districts',auth).then((response) => {
 
-            alert(response.data);
             this.setState((oldState,props)  => {
                 return {
                     ...oldState,
