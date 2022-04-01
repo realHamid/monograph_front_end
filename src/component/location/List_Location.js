@@ -13,6 +13,22 @@ class List_Location extends Component{
         list : []
     };
 
+    deleteRow = id => {
+
+        let data = {
+            'token'  : "b58ac01c6c7a9fb5ffd1a5d9c7d68955" ,
+            'api_token' : JSON.parse(localStorage.getItem('user-data')).api_token,
+            'id'    : id
+        };
+
+        axios.post('/location/deleted',data).then((response) => {
+            this.getLocationList();
+        }).catch((err) => {
+            console.log(err);
+        });
+
+    }
+
 
     getLocationList = () => {
         let auth = {
@@ -101,7 +117,7 @@ class List_Location extends Component{
                                                                     <span className="bfont"> ویرایش  </span>
                                                                 </Link>
                                                                 <div className="dropdown-divider"></div>
-                                                                <a className="dropdown-item" href="#">
+                                                                <a className="dropdown-item" onClick={() => this.deleteRow(row.id)}>
                                                                     <i className="mdi mdi-delete"> </i>
                                                                     <span className="bfont"> حذف  </span>
                                                                 </a>
