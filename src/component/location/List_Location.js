@@ -31,6 +31,7 @@ class List_Location extends Component{
 
 
     getLocationList = () => {
+        
         let auth = {
             'token'  : "b58ac01c6c7a9fb5ffd1a5d9c7d68955" ,
             'api_token' : JSON.parse(localStorage.getItem('user-data')).api_token

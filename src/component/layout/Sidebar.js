@@ -10,13 +10,13 @@ class Sidebar extends Component{
         menu : {
             items : [
                 { title : 'خانه '  ,                icon : 'mdi mdi-home menu-icon' , link : '/' },
-                { title : ' ثبت موقعیت  '  ,        icon : 'mdi mdi-account-multiple-plus menu-icon ' , link : '/location' },
-                { title : ' لیست موقعیت  '  ,       icon : 'mdi mdi-account-multiple-plus menu-icon ' , link : '/list_location' },
+                { title : ' ثبت موقعیت  '  ,        icon : 'mdi mdi-map-marker-radius menu-icon ' , link : '/location' },
+                { title : ' لیست موقعیت  '  ,       icon : 'mdi mdi mdi-chart-bar menu-icon' , link : '/list_location' },
                 { title : '  ثبت دسته بندی  '  ,    icon : 'mdi mdi-border-color menu-icon' , link : '/category' },
-                { title : '  ثبت امکانات  '  ,      icon : 'mdi mdi-home menu-icon' , link : '/feature' },
-                { title : ' ثبت ولایت  '  ,          icon : 'mdi mdi-home menu-icon' , link : '/province' },
-                { title : ' ثبت ولسوالی  '  ,       icon : 'mdi mdi-home menu-icon' , link : '/district' },
-                { title : 'مدریت کاربران  '  ,      icon : 'mdi mdi-home menu-icon' , link : '/user' },
+                { title : '  ثبت امکانات  '  ,      icon : 'mdi mdi-security menu-icon' , link : '/feature' },
+                { title : ' ثبت ولایت  '  ,          icon : 'mdi mdi-cards-variant menu-icon' , link : '/province' },
+                { title : ' ثبت ولسوالی  '  ,       icon : 'mdi mdi-image-filter-frames menu-icon' , link : '/district' },
+                { title : 'مدریت کاربران  '  ,      icon : 'mdi mdi-code-not-equal-variant menu-icon' , link : '/user' },
             ]
         }
     };
